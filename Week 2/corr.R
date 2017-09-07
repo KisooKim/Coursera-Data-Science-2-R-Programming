@@ -14,9 +14,9 @@ corr <- function(directory, threshold = 0) {
     complete <- complete("specdata", 1:332)
     nobs <- complete$nobs
     ids <- complete$id[nobs > threshold]
-    corr_vector <- c()
     
     #combine satisfying data
+    corr_vector <- c()
     j <- 1
     for(i in ids){
         i_use = sprintf("%03d", i)
